@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>静谧花园 · Tranquil Garden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">静谧花园</a>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">首页</a>
+        <a href="#" class="nav-link">文章</a>
+        <a href="#" class="nav-link">分类</a>
+        <a href="maker.html" class="nav-link">制作器</a>
+        <a href="#" class="nav-link">关于</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-tag">✦ 精选文章</span>
+      <h1 class="hero-title">设计是一门<br>关于关系的学问</h1>
+      <p class="hero-desc">好的设计不是让事物变漂亮，而是让事物之间的关系变清晰。探索设计与生活的边界，从细微处发现秩序之美。</p>
+      <div class="hero-meta">
+        <span class="hero-author">AME</span>
+        <span class="hero-divider">·</span>
+        <time datetime="2026-05-18">2026 年 5 月 18 日</time>
+        <span class="hero-divider">·</span>
+        <span>8 分钟阅读</span>
+      </div>
+      <a href="#" class="hero-cta">阅读全文 →</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container">
+      <!-- Featured Posts -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">最近更新</h2>
+          <a href="#" class="section-more">查看全部 →</a>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+              <div class="card-image-icon">🌊</div>
+            </div>
+            <div class="card-body">
+              <span class="card-category">技术</span>
+              <h3 class="card-title">深入理解 CSS 层叠上下文与渲染性能</h3>
+              <p class="card-desc">探索浏览器渲染引擎如何处理层叠上下文，以及如何优化页面性能。</p>
+              <div class="card-footer">
+                <time datetime="2026-05-20">5 月 20 日</time>
+                <span>12 分钟</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image" style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);">
+              <div class="card-image-icon">🏔️</div>
+            </div>
+            <div class="card-body">
+              <span class="card-category">设计</span>
+              <h3 class="card-title">排版即呼吸：文字节奏的视觉韵律</h3>
+              <p class="card-desc">字号、行高、字间距——这些看不见的规则构成了阅读的节奏与呼吸。</p>
+              <div class="card-footer">
+                <time datetime="2026-05-16">5 月 16 日</time>
+                <span>6 分钟</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image" style="background: linear-gradient(135deg, #3c1f0a 0%, #6b3a2a 50%, #a0522d 100%);">
+              <div class="card-image-icon">🍂</div>
+            </div>
+            <div class="card-body">
+              <span class="card-category">随笔</span>
+              <h3 class="card-title">在京都的秋天里寻找时间的形状</h3>
+              <p class="card-desc">古老的庙宇、红色的枫叶、缓慢的时间——京都教会我什么是慢下来。</p>
+              <div class="card-footer">
+                <time datetime="2026-05-12">5 月 12 日</time>
+                <span>15 分钟</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Two Column Layout -->
+      <div class="layout-2col">
+        <!-- Article List -->
+        <section class="section article-list-col">
+          <div class="section-header">
+            <h2 class="section-title">往期文章</h2>
+          </div>
+
+          <article class="card card-horizontal">
+            <div class="card-h-image" style="background: linear-gradient(135deg, #1b4332, #40916c);">
+              <span class="card-h-icon">🌿</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">生活</span>
+              <h3 class="card-title">如何用一平米打造治愈系阳台花园</h3>
+              <p class="card-desc">即使是城市里的小阳台，也能成为属于自己的绿色避难所。</p>
+              <div class="card-footer">
+                <time datetime="2026-05-08">5 月 8 日</time>
+                <span>10 分钟</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-horizontal">
+            <div class="card-h-image" style="background: linear-gradient(135deg, #1a1a2e, #4a4e69);">
+              <span class="card-h-icon">🌙</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">思考</span>
+              <h3 class="card-title">数字极简主义：在信息洪流中保持清醒</h3>
+              <p class="card-desc">我们消费的信息越多，真正吸收的越少。一场关于数字生活的反思。</p>
+              <div class="card-footer">
+                <time datetime="2026-05-03">5 月 3 日</time>
+                <span>8 分钟</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-horizontal">
+            <div class="card-h-image" style="background: linear-gradient(135deg, #3c096c, #7b2cbf);">
+              <span class="card-h-icon">✨</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">教程</span>
+              <h3 class="card-title">从零搭建个人博客：现代工具链完全指南</h3>
+              <p class="card-desc">Next.js、MDX、Vercel——新一代博客技术栈的选型与搭建详解。</p>
+              <div class="card-footer">
+                <time datetime="2026-04-28">4 月 28 日</time>
+                <span>20 分钟</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-horizontal">
+            <div class="card-h-image" style="background: linear-gradient(135deg, #5c4d7d, #9b8ec4);">
+              <span class="card-h-icon">📚</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">书评</span>
+              <h3 class="card-title">《设计中的设计》——原研哉的留白哲学</h3>
+              <p class="card-desc">留白不是无，而是有的另一种存在方式。重新理解设计与日常的关系。</p>
+              <div class="card-footer">
+                <time datetime="2026-04-22">4 月 22 日</time>
+                <span>7 分钟</span>
+              </div>
+            </div>
+          </article>
+
+          <button class="load-more">加载更多文章</button>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- About -->
+          <div class="sidebar-card about-card">
+            <div class="about-avatar">A</div>
+            <h3 class="about-name">AME</h3>
+            <p class="about-bio">设计师 & 写作者。专注于界面设计、交互体验与文字排版。相信好的设计能让世界变得更好一点点。</p>
+            <div class="about-links">
+              <a href="#" class="about-link">Twitter</a>
+              <a href="#" class="about-link">GitHub</a>
+              <a href="#" class="about-link">Email</a>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">文章分类</h3>
+            <ul class="category-list">
+              <li><a href="#">设计 <span>12</span></a></li>
+              <li><a href="#">技术 <span>9</span></a></li>
+              <li><a href="#">随笔 <span>7</span></a></li>
+              <li><a href="#">教程 <span>5</span></a></li>
+              <li><a href="#">书评 <span>4</span></a></li>
+              <li><a href="#">生活 <span>3</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Tags -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">标签</h3>
+            <div class="tag-cloud">
+              <a href="#" class="tag">CSS</a>
+              <a href="#" class="tag">设计哲学</a>
+              <a href="#" class="tag">排版</a>
+              <a href="#" class="tag">JavaScript</a>
+              <a href="#" class="tag">生活美学</a>
+              <a href="#" class="tag">极简主义</a>
+              <a href="#" class="tag">摄影</a>
+              <a href="#" class="tag">读书笔记</a>
+              <a href="#" class="tag">UX</a>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="sidebar-card newsletter-card">
+            <h3 class="sidebar-title">订阅通讯</h3>
+            <p class="newsletter-desc">每周一篇精选文章，直达你的邮箱。</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="你的邮箱地址" required>
+              <button type="submit">订阅</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">静谧花园</a>
+          <p class="footer-desc">一个关于设计、技术与生活的写作空间。</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>导航</h4>
+            <a href="#">首页</a>
+            <a href="#">文章</a>
+            <a href="#">关于</a>
+          </div>
+          <div class="footer-col">
+            <h4>联系</h4>
+            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
+            <a href="#">RSS</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 静谧花园 · Tranquil Garden. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

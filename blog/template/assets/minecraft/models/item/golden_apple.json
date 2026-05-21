@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/template_golden_apple_model",
+    "textures": {
+        "golden_apple": "minecraft:item/golden_apple"
+	}
+}

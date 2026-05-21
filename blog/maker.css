@@ -1,0 +1,359 @@
+/* ===== Maker Page ===== */
+.maker-page {
+  padding: 8rem 0 4rem;
+  min-height: 80vh;
+}
+
+.maker-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.maker-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.maker-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ===== Layout ===== */
+.maker-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ===== Form Card ===== */
+.maker-form-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Form Group ===== */
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.form-hint {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+/* ===== Name Input ===== */
+.name-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color var(--transition);
+  background: var(--input-bg);
+}
+
+.name-input-wrap:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 117, 75, 0.08);
+}
+
+.form-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: transparent;
+  outline: none;
+  min-width: 0;
+}
+
+.name-suffix {
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  background: var(--color-bg);
+  border-left: 1px solid var(--color-border);
+  user-select: none;
+}
+
+/* ===== Upload Area ===== */
+.upload-area {
+  position: relative;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.upload-area:hover {
+  border-color: var(--color-accent);
+  background: rgba(184, 117, 75, 0.03);
+}
+
+.upload-area.dragover {
+  border-color: var(--color-accent);
+  background: rgba(184, 117, 75, 0.06);
+}
+
+.upload-placeholder {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.upload-icon {
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  transition: color var(--transition);
+}
+
+.upload-area:hover .upload-icon {
+  color: var(--color-accent);
+}
+
+.upload-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.upload-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* Upload Preview */
+.upload-preview {
+  position: relative;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: var(--input-bg);
+}
+
+.upload-preview img {
+  max-width: 180px;
+  max-height: 180px;
+  image-rendering: pixelated;
+  border-radius: var(--radius-sm);
+}
+
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.upload-preview:hover .preview-overlay {
+  opacity: 1;
+}
+
+/* ===== Current user.png ===== */
+.current-user-png {
+  display: inline-block;
+  padding: 0.75rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.current-user-img {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+  display: block;
+}
+
+/* ===== Make Button ===== */
+.btn-make {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: 0.03em;
+}
+
+.btn-make:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(184, 117, 75, 0.3);
+}
+
+.btn-make:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-make:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-make.loading {
+  pointer-events: none;
+}
+
+.make-status {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  min-height: 1.5em;
+}
+
+.make-status.success {
+  color: #4a9c6c;
+}
+
+.make-status.error {
+  color: #c75b5b;
+}
+
+/* ===== Preview Card ===== */
+.maker-preview-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 6rem;
+}
+
+.preview-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+/* ===== File Tree ===== */
+.file-tree {
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.file-tree .folder {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.file-tree .file {
+  color: var(--color-text-secondary);
+}
+
+.file-tree .highlight {
+  color: var(--color-accent);
+  background: rgba(184, 117, 75, 0.1);
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* ===== Preview Note ===== */
+.preview-note p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.preview-note ul {
+  list-style: none;
+  padding: 0;
+}
+
+.preview-note ul li {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  padding: 0.3rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.preview-note ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .maker-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .maker-preview-card {
+    position: static;
+  }
+
+  .maker-form-card {
+    padding: 1.75rem;
+  }
+
+  .maker-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-input-wrap {
+    flex-direction: column;
+  }
+
+  .name-suffix {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>材质包制作器 · 静谧花园</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="maker.css">
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">静谧花园</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="#" class="nav-link">文章</a>
+        <a href="#" class="nav-link">分类</a>
+        <a href="maker.html" class="nav-link active">制作器</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Maker Section -->
+  <main class="maker-page">
+    <div class="container">
+      <div class="maker-header">
+        <h1 class="maker-title">材质包制作器</h1>
+        <p class="maker-subtitle">上传你的头像，一键生成专属 Minecraft 金苹果 & 图腾材质包</p>
+      </div>
+
+      <div class="maker-layout">
+        <!-- Left: Form -->
+        <div class="maker-form-card">
+          <!-- Name Input -->
+          <div class="form-group">
+            <label class="form-label">作者名称</label>
+            <div class="name-input-wrap">
+              <input type="text" id="authorName" class="form-input" value="" placeholder="输入你的名字">
+              <span class="name-suffix">金苹果和图腾</span>
+            </div>
+          </div>
+
+          <!-- Image Upload -->
+          <div class="form-group">
+            <label class="form-label">上传64×64的皮肤图片</label>
+
+            <div class="upload-area" id="uploadArea">
+              <input type="file" id="imageInput" accept="image/png" hidden>
+              <div class="upload-placeholder" id="uploadPlaceholder">
+                <div class="upload-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                </div>
+                <p class="upload-text">拖拽 PNG 图片到此处，或点击选择</p>
+                <p class="upload-hint">仅支持 PNG 格式，将自动缩放至 64×64</p>
+              </div>
+              <div class="upload-preview" id="uploadPreview" style="display:none;">
+                <img id="previewImg" src="" alt="预览">
+                <div class="preview-overlay">
+                  <span>点击更换</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button class="btn-make" id="btnMake" disabled>
+            <span class="btn-make-text">制作并下载</span>
+            <span class="btn-make-loading" style="display:none;">正在打包...</span>
+          </button>
+
+          <div class="make-status" id="makeStatus"></div>
+        </div>
+
+        <!-- Right: Preview -->
+        <div class="maker-preview-card">
+          <h3 class="preview-title">材质包结构预览</h3>
+          <div class="file-tree" id="fileTree"></div>
+          <div class="preview-note">
+            <p>上传皮肤图片并填写作者名称，点击"制作"后自动打包为 zip 文件下载。</p>
+            <p>替换内容：</p>
+            <ul>
+              <li>user.png → 你上传的皮肤图片</li>
+              <li>作者信息 → 你填写的名字</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">静谧花园</a>
+          <p class="footer-desc">一个关于设计、技术与生活的写作空间。</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>导航</h4>
+            <a href="index.html">首页</a>
+            <a href="#">文章</a>
+            <a href="#">关于</a>
+          </div>
+          <div class="footer-col">
+            <h4>联系</h4>
+            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
+            <a href="#">RSS</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 静谧花园 · Tranquil Garden. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="maker.js"></script>
+</body>
+</html>
