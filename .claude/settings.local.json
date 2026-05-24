@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PATH=F:/soft/NODEJS:__TRACKED_VAR__ F:/soft/NODEJS/node.exe -e ' *)"
+    ]
+  }
+}

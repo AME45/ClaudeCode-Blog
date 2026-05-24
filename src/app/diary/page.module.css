@@ -1,0 +1,348 @@
+/* ===== Diary Page ===== */
+.diaryPage {
+  padding: 8rem 0 4rem;
+  min-height: 80vh;
+}
+
+.diaryHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.diaryTitle {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.diarySubtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+}
+
+.diaryMaxWidth {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ===== Login ===== */
+.loginForm {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.loginTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.loginInput {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--input-bg);
+  outline: none;
+  margin-bottom: 1rem;
+  transition: border-color var(--transition);
+}
+
+.loginInput:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 117, 75, 0.08);
+}
+
+.loginError {
+  color: #c75b5b;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.loginBtn {
+  display: block;
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.loginBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.toolbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoutBtn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.logoutBtn:hover {
+  border-color: #c75b5b;
+  color: #c75b5b;
+}
+
+.addBtn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.addBtn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* ===== Entry List ===== */
+.entryList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entryCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition);
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.entryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
+.entryMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.entryMood {
+  font-size: 1rem;
+}
+
+.entryCardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.entryPreview {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-text-muted);
+}
+
+.emptyStateIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyStateText {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== Editor ===== */
+.editor {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.editorForm {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.editorGroup {
+  margin-bottom: 1.5rem;
+}
+
+.editorLabel {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.editorInput {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--input-bg);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.editorInput:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(184, 117, 75, 0.08);
+}
+
+.editorTextarea {
+  composes: editorInput;
+  min-height: 300px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.editorActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.editorCancel {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.editorCancel:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.editorSubmit {
+  padding: 0.75rem 2rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.editorSubmit:hover {
+  background: var(--color-accent-hover);
+}
+
+.editorDelete {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid #c75b5b;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: #c75b5b;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-right: auto;
+}
+
+.editorDelete:hover {
+  background: #c75b5b;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .editorForm {
+    padding: 1.5rem;
+  }
+
+  .editorActions {
+    flex-wrap: wrap;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
